@@ -20,20 +20,7 @@ public class MedicalRecord {
     private int doctorId;
     private String notes;
     private String diagnosis;
-
-    private String medication;
-    private String dosage;
-    private String frequency;
-    private String startDate;
-    private String endDate;
-
-//genarate getter, setter , to string ,noargumentconstractor and allargumentconstarctor for above entities
-
-
-
-
-
-
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Prescription prescription;
 
 }

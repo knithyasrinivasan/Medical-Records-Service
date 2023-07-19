@@ -69,12 +69,8 @@ public class MedicalRecordServiceImpl implements MedicalRecordService {
                 retrievedMedicalRecord.setDoctorId(medicalRecord.getDoctorId());
                 retrievedMedicalRecord.setNotes(medicalRecord.getNotes());
                 retrievedMedicalRecord.setDiagnosis(medicalRecord.getDiagnosis());
-                retrievedMedicalRecord.setMedication(medicalRecord.getMedication());
-                retrievedMedicalRecord.setDosage(medicalRecord.getDosage());
-                retrievedMedicalRecord.setFrequency(medicalRecord.getFrequency());
-                retrievedMedicalRecord.setStartDate(medicalRecord.getStartDate());
-                retrievedMedicalRecord.setEndDate(medicalRecord.getEndDate());
-                // retrievedMedicalRecord.setPrescription(medicalRecord.getPrescription());
+                
+                retrievedMedicalRecord.setPrescription(medicalRecord.getPrescription());
 
                 medicalRecordRepository.save(retrievedMedicalRecord);
                 return retrievedMedicalRecord;
