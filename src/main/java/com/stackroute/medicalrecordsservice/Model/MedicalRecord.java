@@ -20,7 +20,11 @@ public class MedicalRecord {
     private int doctorId;
     private String notes;
     private String diagnosis;
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Prescription prescription;
+    private String medication;
+    private String dosage;
+    private String frequency;
+    private String startDate;
+    private String endDate;
+  
 
 }
