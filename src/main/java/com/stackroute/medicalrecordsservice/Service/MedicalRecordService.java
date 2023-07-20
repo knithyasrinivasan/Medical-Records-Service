@@ -20,5 +20,8 @@ public interface MedicalRecordService {
     boolean deleteMedicalRecordByPatientId(int patientId) throws MedicalRecordNotFoundException;
 
     boolean deleteAllMedicalRecords() throws MedicalRecordNotFoundException;
+
+    //write method to get product by name
+
     
 }
