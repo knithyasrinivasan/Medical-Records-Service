@@ -21,8 +21,7 @@ public interface MedicalRecordService {
 
     boolean deleteAllMedicalRecords() throws MedicalRecordNotFoundException;
 
-    //write method to get product by name 
-    List<MedicalRecord> getMedicalRecordByPatientName(String patientName) throws MedicalRecordNotFoundException;
+    public MedicalRecord getPatientByName(String patientName) throws MedicalRecordNotFoundException;
 
     
 }

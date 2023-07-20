@@ -102,21 +102,10 @@ public class MedicalRecordServiceImpl implements MedicalRecordService {
         }
     }
 
- // implement the method to get product by name with bug
+ // implement the method to get patient by name with bug
    @Override
-    public List<MedicalRecord> getMedicalRecordByPatientName(String patientName) throws MedicalRecordNotFoundException {
-        if (medicalRecordRepository.count() > 0) {
-            List<MedicalRecord> retrievedMedicalRecords = medicalRecordRepository.findAll();
-            List<MedicalRecord> retrievedMedicalRecordsByName = new ArrayList<>();
-            for (MedicalRecord medicalRecord : retrievedMedicalRecords) {
-                if (medicalRecord.getPatientName().equals(patientName)) {
-                    retrievedMedicalRecordsByName.add(medicalRecord);
-                }
-            }
-            return retrievedMedicalRecordsByName;
-        }else {
-            throw new MedicalRecordNotFoundException("Medical Record Not Found");
-        }
-    }
+   public MedicalRecord getPatientByName(String patientName) {
+    return medicalRecordRepository.findByPatientName(patientName);
+}
  
 }

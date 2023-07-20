@@ -86,11 +86,11 @@ public class MedicalRecordController {
         return responseEntity;
     }
 
-    //write method to get product by name with bug 
+    //write method to get patient by Name with bug 
     @GetMapping("/medicalRecord/{patientName}")
     public ResponseEntity<?> getMedicalRecordByPatientName(@PathVariable String patientName) {
         try {
-            responseEntity = ResponseEntity.ok(medicalRecordService.getMedicalRecordByPatientName(patientName));
+            responseEntity = ResponseEntity.ok(medicalRecordService.getPatientByName(patientName));
         } catch (Exception e) {
             responseEntity = ResponseEntity.badRequest().body(e.getMessage());
         }
