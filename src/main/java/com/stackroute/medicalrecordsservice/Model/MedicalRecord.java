@@ -2,9 +2,6 @@ package com.stackroute.medicalrecordsservice.Model;
 
 import javax.persistence.*;
 
-import lombok.*;
-
-
 @Entity
 @Table(name = "medical_records")
 public class MedicalRecord {
